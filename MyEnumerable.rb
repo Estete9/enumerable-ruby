@@ -6,7 +6,13 @@ module MyEnumerable
   def any
     # code implementation
   end
-  def filter
-    # code implementation
+  def filter(&block)
+    filtered_arr = []
+    each do |num|
+      if block.call(num)
+        filtered_arr.append(num)
+      end
+    end
+    filtered_arr
   end
 end
