@@ -1,4 +1,7 @@
 class MyList
+
+include MyEnumerable
+
   def def initialize(list)
     @list = list
   end
