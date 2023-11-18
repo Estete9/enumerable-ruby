@@ -3,8 +3,9 @@ module MyEnumerable
     each { |num| return false unless block.call(num)}
     true
   end
-  def any
-    # code implementation
+   def any?(&block)
+    each { |item| return true if block.call(item) }
+    false
   end
   def filter
     # code implementation
