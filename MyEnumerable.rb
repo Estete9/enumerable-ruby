@@ -7,7 +7,13 @@ module MyEnumerable
     each { |item| return true if block.call(item) }
     false
   end
-  def filter
-    # code implementation
+  def filter(&block)
+    filtered_arr = []
+    each do |num|
+      if block.call(num)
+        filtered_arr.append(num)
+      end
+    end
+    filtered_arr
   end
 end

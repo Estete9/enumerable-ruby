@@ -12,6 +12,7 @@ include MyEnumerable
   end
 end
 
-my_list_obj = MyList.new([1,2])
+my_list_obj = MyList.new([1,2,4,6,1,9,4,8,53,6,8,34])
 
-puts my_list_obj.all? {|num| num < 5}
+p my_list_obj.all? { |num| num < 5 }
+p my_list_obj.filter(&:even?)
